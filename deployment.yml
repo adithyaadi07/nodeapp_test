@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nodeserver
-        image: adizura07/nodeapp_test:latest
+        image: adizura007/nodeapp_test:latest
         ports:
         - containerPort: 3000
