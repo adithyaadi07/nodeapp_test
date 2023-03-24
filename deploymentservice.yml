@@ -3,20 +3,20 @@ kind: Deployment
 metadata:
   name: nodeapp-deployment
   labels:
-    app: nodeapp
+    app: nodeapp_test
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodeapp
+      app: nodeapp_test
   template:
     metadata:
       labels:
-        app: nodeapp 
+        app: nodeapp_test
     spec:
       containers:
       - name: nodeserver
-        image: adizura07/nodeapp_test:latest
+        image: adizura007/nodeapp_test:latest
         ports:
         - containerPort: 3000
         
@@ -29,7 +29,7 @@ metadata:
   name: nodeapp-service
 spec:
   selector:
-    app: nodeapp 
+    app: nodeapp_test 
   type: LoadBalancer
   ports:
   - protocol: TCP
