@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: nodeapp-deployment
   labels:
-    app: nodeapp
+    app: nodeapp_test
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodeapp
+      app: nodeapp_test
   template:
     metadata:
       labels:
-        app: nodeapp 
+        app: nodeapp_test 
     spec:
       containers:
       - name: nodeserver
